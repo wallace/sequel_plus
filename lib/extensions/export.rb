@@ -45,7 +45,7 @@ module Sequel
             when DateTime then
               "#{quot}#{row[col].localtime.strftime('%Y-%m-%dT%H:%M%Z')}#{quot}"
             when Time then 
-              "#{quot}#{row[col].localtime.strftime('%H:%M%Z')}#{quot}"
+              "#{quot}#{row[col].localtime.strftime('%Y-%m-%dT%H:%M%Z')}#{quot}"
             when Float, BigDecimal then 
               row[col].to_f
             when BigDecimal, Bignum, Fixnum then 
